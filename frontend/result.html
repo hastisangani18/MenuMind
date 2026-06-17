@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Result | MenuMind</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-icon">🍽️</span>
+        <h2>MenuMind</h2>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="scan.html">Scan Menu</a>
+        <a href="result.html">Results</a>
+        <a href="history.html">History</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <a href="scan.html" class="nav-btn">New Scan</a>
+</header>
+
+<section class="result-page">
+    <div class="result-header">
+        <span class="badge">AI Nutrition Report</span>
+        <h1>Your Menu Analysis</h1>
+        <p>Estimated calories, allergen alerts and healthier alternatives for detected Indian dishes.</p>
+    </div>
+
+    <div class="extracted-text-card">
+        <h3>📋 Extracted Menu Text</h3>
+        <p id="resultOcrText">No OCR text found.</p>
+    </div>
+
+    <div class="summary-row">
+        <div class="summary-card">
+            <span>🍛</span>
+            <h3>0</h3>
+            <p>Dishes Detected</p>
+        </div>
+
+        <div class="summary-card">
+            <span>🔥</span>
+            <h3>0</h3>
+            <p>Total Calories</p>
+        </div>
+
+        <div class="summary-card">
+            <span>⚠️</span>
+            <h3>0</h3>
+            <p>Allergen Alerts</p>
+        </div>
+
+        <div class="summary-card">
+            <span>🥗</span>
+            <h3>0</h3>
+            <p>Healthy Swaps</p>
+        </div>
+    </div>
+
+    <div class="result-grid" id="dynamicResultGrid">
+        <!-- Dynamic dish cards will come here -->
+    </div>
+
+    <div class="result-actions">
+        <a href="scan.html" class="primary-btn">Scan Another Menu</a>
+        <button class="secondary-btn btn" onclick="saveToHistory()">Save to History</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 MenuMind | AI Restaurant Menu Nutrition Scanner</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

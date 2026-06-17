@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | MenuMind</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-icon">🍽️</span>
+        <h2>MenuMind</h2>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="scan.html">Scan Menu</a>
+        <a href="result.html">Results</a>
+        <a href="history.html">History</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <a href="scan.html" class="nav-btn">New Scan</a>
+</header>
+
+<section class="history-page">
+    <div class="history-header">
+        <span class="badge">Saved Reports</span>
+        <h1>Your Scan History</h1>
+        <p>View your previously saved menu nutrition analysis reports.</p>
+    </div>
+
+    <div class="history-actions">
+        <a href="scan.html" class="primary-btn">Scan New Menu</a>
+        <button class="secondary-btn btn" onclick="clearHistory()">Clear History</button>
+    </div>
+
+    <div class="history-list" id="historyList">
+        <!-- History cards will come from JavaScript -->
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 MenuMind | AI Restaurant Menu Nutrition Scanner</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

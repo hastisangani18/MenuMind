@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Menu | MenuMind</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-icon">🍽️</span>
+        <h2>MenuMind</h2>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="scan.html">Scan Menu</a>
+        <a href="result.html">Results</a>
+        <a href="history.html">History</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <a href="scan.html" class="nav-btn">Start Scan</a>
+</header>
+
+<section class="scan-page">
+    <div class="scan-left">
+        <span class="badge">AI Menu Scanner</span>
+        <h1>Upload your restaurant menu photo</h1>
+        <p>
+            MenuMind will read dish names from your menu and show calories,
+            allergens, and healthier Indian food alternatives.
+        </p>
+
+        <div class="upload-box" id="uploadBox">
+            <input type="file" id="menuImage" accept="image/*" hidden>
+
+            <div class="upload-content">
+                <span>📸</span>
+                <h3>Click to Upload Menu</h3>
+                <p>PNG, JPG or JPEG supported</p>
+            </div>
+        </div>
+
+        <div class="scan-buttons">
+            <button class="primary-btn btn" onclick="analyzeMenu()">Analyze Menu</button>
+            <button class="secondary-btn btn" onclick="clearPreview()">Remove Image</button>
+        </div>
+    </div>
+
+    <div class="scan-right">
+        <div class="preview-card">
+            <h3>Menu Preview</h3>
+
+            <div class="preview-area" id="previewArea">
+                <p>No image selected yet</p>
+            </div>
+<div class="ocr-output">
+    <h4>Extracted Menu Text</h4>
+    <textarea id="ocrText" placeholder="OCR result will appear here..."></textarea>
+</div>
+            <div class="demo-dishes">
+                <h4>Sample detected dishes</h4>
+
+                <div class="mini-dish">
+                    <span>🍛</span>
+                    <p>Paneer Butter Masala</p>
+                </div>
+
+                <div class="mini-dish">
+                    <span>🍚</span>
+                    <p>Veg Biryani</p>
+                </div>
+
+                <div class="mini-dish">
+                    <span>🥣</span>
+                    <p>Dal Tadka</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="loading-screen" id="loadingScreen">
+    <div class="scanner-loader">
+        <div class="scan-line"></div>
+        <span>🤖</span>
+        <h2>AI is scanning your menu...</h2>
+        <p>Detecting dishes, calories and allergens</p>
+    </div>
+</div>
+<footer>
+    <p>© 2026 MenuMind | AI Restaurant Menu Nutrition Scanner</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
